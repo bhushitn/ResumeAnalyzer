@@ -53,7 +53,7 @@ This project implements a two-part solution using Google's Gemini API to automat
 
 ## Data
 
-*   **Source:** [Resume Dataset on Kaggle](https://www.kaggle.com/datasets/snehaanbhawal/resume-dataset) by Snehaan Bhawal.
+*   **Source:** [Resume Dataset on Kaggle](https://www.kaggle.com/datasets/snehaanbhawal/resume-dataset)
 *   **Content:** Contains over 2400 resumes in CSV format with columns:
     *   `ID`: Unique identifier.
     *   `Resume_str`: Raw resume text.
