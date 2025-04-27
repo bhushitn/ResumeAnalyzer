@@ -131,33 +131,14 @@ This project implements a two-part solution using Google's Gemini API to automat
 
 ## Results
 
-*   **Structuring:** (If `PROCESS_RAW_RESUMES` was `True`) The process successfully generated structured data for [X]% of the input resumes. [Y] errors were encountered during [API calls / JSON parsing] (see `structuring_errors.log` for details).
-*   **Classification Model Performance (Test Set):**
-    *   **Accuracy:** Approximately [Insert Accuracy % from notebook evaluation]%.
-    *   **Key Metrics (from Classification Report):**
-        *   Precision, Recall, F1-Score vary per category. [Mention any notable high/low performing categories, e.g., "Achieved high precision for 'Engineering' but lower recall for 'Fitness'."].
-    *   **Confusion Matrix:** [Describe key observations, e.g., "Shows strong diagonal elements indicating good overall classification, with some confusion between 'Sales' and 'HR' roles."]
-
-*(Replace bracketed placeholders with actual results from running the notebook.)*
+---
 
 ## Interpretation
 
-The results demonstrate the viability of using Gemini for both structuring and classifying resume data.
 
-*   The structuring task, while powerful, requires careful prompt engineering and is susceptible to variations in resume formats. The error rate indicates areas where the prompt or model might need refinement.
-*   The classification model achieved high accuracy using embeddings derived directly from the raw text. This suggests that semantic embeddings capture sufficient information to distinguish between the selected job categories effectively. The confusion matrix highlights specific areas where the model might struggle, potentially due to overlapping skills or ambiguous job titles in the resumes themselves. The performance indicates that this approach is promising for automated first-pass resume sorting.
 
 ## Recommendations & Future Work
 
-*   **Improve Structuring:** Refine few-shot prompts with more edge cases. Experiment with `gemini-1.5-pro`. Add post-processing validation for structured data.
-*   **Enhance Classification:**
-    *   Tune hyperparameters (learning rate, dropout, layer sizes).
-    *   Experiment with different embedding models or task types.
-    *   Incorporate structured features (if reliably extracted) alongside embeddings.
-    *   Train on a larger dataset or all 24 original categories.
-*   **Efficiency:** Implement batch processing for the `embed_content` API to handle larger datasets faster.
-*   **Functionality:** Add support for direct PDF input using libraries like `PyMuPDF`.
-*   **Deployment:** Package the pipeline into a simple web UI (Streamlit/Gradio/Flask) for practical use.
 
 ## Acknowledgements
 
